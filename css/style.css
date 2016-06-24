@@ -1,4 +1,20 @@
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0; }
+
+.container {
+  background: #2fa0d5;
+  width: 100%;
+  height: auto; }
+
 h1 {
-  color: #a7ff86; }
+  color: #ff605b;
+  margin: 0 0 0 0; }
+
+#particles-js {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #000000; }
 
 /*# sourceMappingURL=style.css.map */

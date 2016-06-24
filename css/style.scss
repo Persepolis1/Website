@@ -1,5 +1,31 @@
 $maincolor : #a7ff86;
 $second : #ff605b;
+$zero : 0 0 0 0;
+
+@mixin relative($position: relative ,$width : 100%,$height: auto){
+  position: $position;
+  width: $width;
+  height: $height;
+}
+body{
+  margin: $zero;
+  padding:$zero;
+}
+.container{
+  background: #2fa0d5;
+  width: 100%;
+  height: auto;
+}
 h1{
-  color: $maincolor;
+  color: $second;
+  margin:$zero;
+}
+#particles-js{
+  @include relative();
+  background-color: #000000;
+  //background-image: url('');
+  //background-size: cover;
+  //background-position: 50% 50%;
+  //background-repeat: no-repeat;
+
 }
