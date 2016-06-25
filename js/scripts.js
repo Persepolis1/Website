@@ -3,6 +3,6 @@ particlesJS.load('particles-js', 'js/particles.json', function() {
 });
 $(document).ready(function () {
     $('h1').click(function () {
-        alert('test');
+        console.log('test');
     });
 });

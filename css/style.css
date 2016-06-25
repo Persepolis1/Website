@@ -1,15 +1,30 @@
 body {
+  font-family: "Source Sans Pro", sans-serif;
   margin: 0 0 0 0;
   padding: 0 0 0 0; }
 
 .container {
-  background: #2fa0d5;
+  background: #f46720;
   width: 100%;
   height: auto; }
 
-h1 {
-  color: #ff605b;
-  margin: 0 0 0 0; }
+.banner-header {
+  height: 135px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 50%;
+  border: 1px solid #22c1ee; }
+  .banner-header h1, .banner-header h2 {
+    color: #22c1ee;
+    margin: 0 0 0 0;
+    text-align: center;
+    font-size: 3.125em; }
+  .banner-header h2 span {
+    color: #efbd70; }
 
 #particles-js {
   position: relative;

@@ -1,5 +1,6 @@
-$maincolor : #a7ff86;
-$second : #ff605b;
+$maincolor : #22c1ee;
+$main-font:  'Source Sans Pro', sans-serif;
+$secondcolor : #efbd70;
 $zero : 0 0 0 0;
 
 @mixin relative($position: relative ,$width : 100%,$height: auto){
@@ -7,19 +8,45 @@ $zero : 0 0 0 0;
   width: $width;
   height: $height;
 }
+@mixin absolute-center($height){
+  height: $height;
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin: auto;
+}
+@function px-to-em($target,$context){
+  @return ($target/$context) *1em;
+}
+//--Webpage--
 body{
+  font-family: $main-font;
   margin: $zero;
   padding:$zero;
 }
 .container{
-  background: #2fa0d5;
+  background: #f46720;
   width: 100%;
   height: auto;
 }
-h1{
-  color: $second;
-  margin:$zero;
+.banner-header{
+  @include absolute-center(135px);
+  width: 50%;
+  border:1px solid #{$maincolor};
+  h1,h2{
+    color: $maincolor;
+    margin: $zero;
+    text-align: center;
+    font-size: px-to-em(50,16);
+  }
+  h2 span{
+    color: $secondcolor;
+  }
 }
+
+// --Section 1--
 #particles-js{
   @include relative();
   background-color: #000000;
