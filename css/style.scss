@@ -1,20 +1,24 @@
 $maincolor : #22c1ee;
-$main-font:  'Source Sans Pro', sans-serif;
+$main-font:  'custom', sans-serif;
 $secondcolor : #efbd70;
 $zero : 0 0 0 0;
-
+@font-face {
+  font-family: custom;
+  src: url(VCR_OSD_MONO_1.001.ttf);
+}
 @mixin relative($position: relative ,$width : 100%,$height: auto){
   position: $position;
   width: $width;
   height: $height;
 }
-@mixin absolute-center($height){
+@mixin absolute-center($height:0px,$width:0px,$top:0px,$right:0px,$bottom:0px,$left:0px){
   height: $height;
+  width: $width;
   position: absolute;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
   margin: auto;
 }
 @function px-to-em($target,$context){
@@ -27,24 +31,10 @@ body{
   padding:$zero;
 }
 .container{
-  background: #f46720;
   width: 100%;
   height: auto;
 }
-.banner-header{
-  @include absolute-center(135px);
-  width: 50%;
-  border:1px solid #{$maincolor};
-  h1,h2{
-    color: $maincolor;
-    margin: $zero;
-    text-align: center;
-    font-size: px-to-em(50,16);
-  }
-  h2 span{
-    color: $secondcolor;
-  }
-}
+
 
 // --Section 1--
 #particles-js{
@@ -54,5 +44,29 @@ body{
   //background-size: cover;
   //background-position: 50% 50%;
   //background-repeat: no-repeat;
-
+}
+.banner-header{
+  @include absolute-center(135px,50%);
+  h1,h2{
+    color: white;
+    margin: $zero;
+    text-align: center;
+    font-size: px-to-em(50,16);
+  }
+  h2 span{
+    color: $secondcolor;
+  }
+}
+.scroll-arrow{
+  @include absolute-center(150px,150px,65%);
+  text-align: center;
+  img{
+    height: 150px;
+    width:115px;
+  }
+}
+//END SECTION 1
+//SECTION 2
+.section-2{
+  @include relative();
 }
